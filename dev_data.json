@@ -1,0 +1,41 @@
+{
+    "AttributeDefinitions": [
+    {
+        "AttributeName": "name", 
+        "AttributeType": "S"
+    }, 
+    {
+        "AttributeName": "emailId", 
+        "AttributeType": "S"
+    }
+    ], 
+        "GlobalSecondaryIndexes": [
+        {
+            "IndexName": "name-index", 
+            "Projection": {
+                "ProjectionType": "ALL"
+            }, 
+            "ProvisionedThroughput": {
+                "WriteCapacityUnits": 5, 
+                "ReadCapacityUnits": 5
+            }, 
+            "KeySchema": [
+            {
+                "KeyType": "HASH", 
+                "AttributeName": "name"
+            }
+            ]
+        }
+    ], 
+        "ProvisionedThroughput": {
+            "WriteCapacityUnits": 5, 
+            "ReadCapacityUnits": 5
+        }, 
+        "TableName": "dev_data", 
+        "KeySchema": [
+        {
+            "KeyType": "HASH", 
+            "AttributeName": "emailId"
+        }
+    ]
+}
