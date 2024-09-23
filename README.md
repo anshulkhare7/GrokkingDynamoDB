@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  [![Twitter](https://img.shields.io/twitter/follow/_anshulkhare?style=social)](https://twitter.com/_anshulkhare) 
+
 ## Dynamo DB setup
 
 Set Env Variable `AWS_SDK_LOAD_CONFIG` to `true` so that the region is loaded from `~/.aws/config`
@@ -25,3 +27,7 @@ If you've setup the AWS keys, regions etc. using `aws configure`, then you can w
 
 ### Create record
 `aws dynamodb put-item --endpoint-url http://localhost:8042 --table-name dev_data --item '{"emailId": {"S": "abc@xyz.com"}}'`
+
+# License
+
+This repository is released under the [MIT license](https://opensource.org/licenses/MIT). In short, this means you are free to use this software in any personal, open-source or commercial projects. Attribution is optional but appreciated.
